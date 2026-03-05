@@ -121,3 +121,22 @@ visits = [
 ]
 # print(department_patient_count(visits))
 
+# Email Domain Analysis
+class DefaultSolution:
+    def count_company_emails(self, emails):
+        count = 0
+        for email in emails:
+            if email.endswith("@company.com"):
+                count += 1
+        return count
+
+# Username Validation System
+class Solution:
+
+    def get_valid_usernames(self, usernames):
+        valid_usernames = []
+        for i in usernames:
+            if i.startswith("user") and i[4:].isdigit() and len(i)>6:
+                valid_usernames.append(i)
+
+        return valid_usernames
